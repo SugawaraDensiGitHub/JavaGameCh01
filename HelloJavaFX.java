@@ -20,12 +20,22 @@ public class HelloJavaFX extends Application {
 		System.out.println(stage.widthProperty());
 		// ReadOnlyDoubleProperty [bean: javafx.stage.Stage@4d4c7159, name: width, value: 540.0]
 
-
         Label lblMsg = new Label("Hello, JavaFX");
         lblMsg.setAlignment(Pos.CENTER);
+		// PosはEnum(列挙体)でCENTERは定数
         lblMsg.setFont(new Font(64));
 
         stage.setScene(new Scene(lblMsg));
         stage.show();
     }
 }
+/*
+ Stage
+  :title
+  :width
+  :height
+  +-Scene
+     +-Label
+        :Pos.CENTER
+        :font
+*/
